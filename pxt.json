@@ -3,7 +3,8 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "radio": "*"
+        "radio": "*",
+        "weatherbit": "github:sparkfun/pxt-weather-bit#v0.0.15"
     },
     "files": [
         "main.blocks",
