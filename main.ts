@@ -14,6 +14,19 @@ basic.showLeds(`
     . . # . .
     . . # . .
     `)
+for (let index = 0; index < 4; index++) {
+    basic.clearScreen()
+    basic.showIcon(IconNames.Square)
+    basic.clearScreen()
+    basic.showIcon(IconNames.SmallSquare)
+}
+basic.showLeds(`
+    . . # . .
+    . . # . .
+    . . # . .
+    . . # . .
+    . . # . .
+    `)
 basic.forever(function () {
     if (IndexNumber > 12) {
         IndexNumber = 1
@@ -44,12 +57,14 @@ basic.forever(function () {
     } else if (IndexNumber == 12) {
         basic.showIcon(IconNames.Duck)
     } else {
-        // This is an error condition, should not reach this point ever 
-        for (let index = 0; index < 4; index++) {
+        // This is an error condition, whcih we should not ever reach, if the code is correct :) 
+        for (let index = 0; index < 8; index++) {
             basic.clearScreen()
             basic.showIcon(IconNames.Square)
             basic.clearScreen()
             basic.showIcon(IconNames.SmallSquare)
+            basic.clearScreen()
+            basic.showIcon(IconNames.SmallDiamond)
         }
     }
 })
